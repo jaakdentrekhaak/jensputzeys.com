@@ -1,0 +1,15 @@
+/* Shared design tokens ("Ink & Ember"). Verify with: python3 tools/check_contrast.py */
+/*light*/
+:root{--bg:#f5efe4;--surface:#fffcf5;--text:#251f33;--muted:#5b5469;--accent:#8c3a12;--border:#d9cfbd;--border-strong:#847a6b;--highlight:#fbebb0;--highlight-edge:#8a6200;--focus:#3a3fc8;--chevron:#251f33;color-scheme:light dark}
+@media (prefers-color-scheme:dark){
+/*dark*/
+:root{--bg:#1e1a2e;--surface:#2a2540;--text:#eee9f6;--muted:#b9b2cc;--accent:#f2b985;--border:#443d62;--border-strong:#8a82a8;--highlight:#3c3217;--highlight-edge:#d9aa3a;--focus:#9fc0ff;--chevron:#eee9f6}
+}
+*{box-sizing:border-box}
+html{color-scheme:light dark;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 Georgia,"Iowan Old Style",serif}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:1.5rem 16px 4rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
